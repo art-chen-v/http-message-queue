@@ -23,7 +23,7 @@ func (b *Broker) getMsgFromQueue(w http.ResponseWriter, r *http.Request) {
 	queue := b.getQueue(queueName)
 
 	if queue == nil {
-		http.Error(w, "сначала создайте очередь чере метод PUT", http.StatusNotFound)
+		http.Error(w, "first, create a queue using the PUT method", http.StatusNotFound)
 		return
 	}
 
@@ -33,7 +33,7 @@ func (b *Broker) getMsgFromQueue(w http.ResponseWriter, r *http.Request) {
 	if timeoutStr != "" {
 		timeoutSeconds, err := strconv.Atoi(timeoutStr)
 		if err != nil {
-			http.Error(w, "неправильный формат timeout", http.StatusBadRequest)
+			http.Error(w, "incorrect timeout format", http.StatusBadRequest)
 			return
 		}
 
