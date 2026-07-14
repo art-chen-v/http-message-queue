@@ -16,10 +16,6 @@ The server exposes a simple REST API that allows clients to enqueue and dequeue 
 - Thread-safe implementation
 - No external dependencies
 
-## Demo
-
-![Queue animation](./docs/http_queue_demo.gif)
-
 ## Building
 
 ```bash
